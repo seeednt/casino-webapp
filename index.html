@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sekiro Casino</title>
+</head>
+<body>
+  <h1>🎰 Sekiro Casino</h1>
+  <p>If you see this, your Web App works.</p>
+
+  <script>
+    if (window.Telegram && Telegram.WebApp) {
+      Telegram.WebApp.ready();
+      const user = Telegram.WebApp.initDataUnsafe.user;
+      if (user) {
+        document.body.innerHTML += `<p>Welcome, ${user.username || user.first_name}</p>`;
+      }
+    }
+  </script>
+</body>
+</html>
